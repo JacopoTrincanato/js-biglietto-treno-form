@@ -41,13 +41,14 @@ button.addEventListener('click', ()=>{
 const finalButton = document.getElementById('btn');
 let kilometresTot = document.getElementById('km');
 
-let ageYears = document.getElementById('datas');
+let ageYears = document.getElementById('eta');
 let value1 = document.getElementById('Maggiorenne');
 let value2 = document.getElementById('Minorenne');
 let value3 = document.getElementById('Over65');
 
 
-finalButton.addEventListener('click', ()=>{
+finalButton.addEventListener('click', function(e){
+    e.preventDefault()
     let kilometresElem = kilometresTot.value;
 
     let ageEl = ageYears.value;
@@ -75,15 +76,8 @@ finalButton.addEventListener('click', ()=>{
     }
 
     console.log(ticketPrice.toFixed(2));
-
-    return ticketPrice;
     
 
-})
-
-finalButton.addEventListener('submit', function(e){
-    e.preventDefault()
-    
     let datas = e.target.datas.value;
 
     let km = e.target.km.value;
