@@ -39,24 +39,29 @@
                 <label for="formGroupExampleInput" class="form-label fw-medium">
                     <span class="mx-2">Nome e Cognome</span>
                 </label>
-                <input type="text" class="form-control" placeholder="Inserisci i tuoi dati" aria-label="Phone number">
+                <input type="text" class="form-control" id="datas" name="datas" placeholder="Inserisci i tuoi dati" aria-label="Data">
             </div>
 
             <div class="col-12 col-md-4 mt-2">
                 <label for="formGroupExampleInput" class="form-label fw-medium">
                     <span class="mx-2">Km da percorrere</span>
                 </label>
-                <input type="text" class="form-control" placeholder="Inserisci i km da percorrere" aria-label="Email">
+                <input type="text" class="form-control" id="km" name="km" placeholder="Inserisci i km da percorrere" aria-label="Km">
             </div>
 
             <div class="col-12 col-md-4 mt-2">
                 <label for="formGroupExampleInput" class="form-label fw-medium">Fascia d'età</label>
-                <select class="form-select" aria-label="Default select example">
+                <select class="form-select" id="eta" name="eta" aria-label="Default select example">
                     <option value="1">Maggiorenne</option>
                     <option value="2">Minorenne</option>
+                    <option value="2">Over-65</option>
                 </select>
             </div>
-        </div>   
+        </div>
+        
+        <div class="my-4">
+            <button type="button" id="btn" class="btn btn-secondary">Calcola</button>
+        </div>
 
     </div>
 
