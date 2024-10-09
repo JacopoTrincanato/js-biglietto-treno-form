@@ -33,7 +33,7 @@
     <div class="container bg-primary p-4 mt-4">
         <h1 class="mt-2 text-center">Calcolo Prezzo Biglietto</h1>
         
-        <!-- Section 1 -->
+        <!-- FORM -->
         <div class="row mt-4">
             <div class="col-12 col-md-4 mt-2">
                 <label for="formGroupExampleInput" class="form-label fw-medium">
@@ -52,29 +52,38 @@
             <div class="col-12 col-md-4 mt-2">
                 <label for="formGroupExampleInput" class="form-label fw-medium">Fascia d'età</label>
                 <select class="form-select" id="eta" name="eta" aria-label="Default select example">
-                    <option value="1">Maggiorenne</option>
-                    <option value="2">Minorenne</option>
-                    <option value="2">Over-65</option>
+                    <option value="1" id="Maggiorenne">Maggiorenne</option>
+                    <option value="2" id="Minorenne">Minorenne</option>
+                    <option value="2" id="Over65">Over-65</option>
                 </select>
             </div>
         </div>
         
-        <div class="my-4">
+        <div class="my-4 text-center">
             <button type="button" id="btn" class="btn btn-secondary">Calcola</button>
         </div>
 
     </div>
 
-    <!-- Section 2 -->
-    <div class="row mt-4">
-        <div class="col-12 col-md-6 mt-2">
-            <label for="formGroupExampleInput" class="form-label fw-medium">Nome</label>
-            <input type="text" class="form-control" placeholder="Inserisci il tuo nome" aria-label="First name">
-        </div>
-        
-        <div class="col-12 col-md-6 mt-2">
-            <label for="formGroupExampleInput" class="form-label fw-medium">Cognome</label>
-            <input type="text" class="form-control" placeholder="Inserisci il tuo cognome" aria-label="Last name">
+    <!-- Train Ticket -->
+    <div class="container bg-success p-4 mt-4">
+        <h1 class="mt-2 text-center">Biglietto treno</h1>
+        <div class="row mt-4 d-flex">
+            <div class="col-12 col-md-6 mt-2">
+                <img class="rounded" src="https://t3.ftcdn.net/jpg/04/41/13/08/360_F_441130850_NEFqPnYVxrzMjFYMSBmzxxk0wphLSBpf.jpg" alt="">
+            </div>
+            
+            <div class="col-12 col-md-6 mt-2">
+                <label for="formGroupExampleInput" class="form-label fw-medium">Cognome</label>
+                <input type="text" class="form-control" placeholder="Inserisci il tuo cognome" aria-label="Last name">
+
+                <label for="formGroupExampleInput" class="form-label fw-medium">Nome</label>
+                <input type="text" class="form-control" placeholder="Inserisci il tuo nome" aria-label="First name">
+
+                <label for="formGroupExampleInput" class="form-label fw-medium">Costo</label>
+                <input type="text" class="form-control" placeholder="Inserisci il tuo nome" aria-label="cost">
+            </div>
+    
         </div>
 
     </div>

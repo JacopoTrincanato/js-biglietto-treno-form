@@ -1,6 +1,6 @@
 //MILESTONE 1
 
-/*const button = document.getElementById('button');
+const button = document.getElementById('button');
 let kilometres = document.getElementById('kilometres');
 
 let age = document.getElementById('age');
@@ -34,47 +34,54 @@ button.addEventListener('click', ()=>{
     return ticket_price;
     
 
-})*/
+})
 
 //MILESTONE 2
 
 const finalButton = document.getElementById('btn');
-let kilometres = document.getElementById('km');
+let kilometresTot = document.getElementById('km');
 
-let age = document.getElementById('datas');
+let ageYears = document.getElementById('datas');
+let value1 = document.getElementById('Maggiorenne');
+let value2 = document.getElementById('Minorenne');
+let value3 = document.getElementById('Over65');
 
 
-btn.addEventListener('click', ()=>{
-    let kilometresEl = kilometres.value;
+finalButton.addEventListener('click', ()=>{
+    let kilometresElem = kilometresTot.value;
 
-    let ageEl = age.value;
+    let ageEl = ageYears.value;
 
-    let ticket_price;
+    let ticketPrice;
 
-    let price = 0.21;
+    let priceKm = 0.21;
 
-    let young_discount = (price * kilometresEl *20) / 100;
+    let valueDue = value2.value;
 
-    let senior_discount = (price * kilometresEl *40) / 100;
+    let valueTre = value3.value;
+
+    let youngDiscount = (priceKm * kilometresElem *20) / 100;
+
+    let seniorDiscount = (priceKm * kilometresElem *40) / 100;
     
-    if (ageEl === 'Minorenne') {
-    ticket_price = kilometresEl * price - young_discount;
+    if (ageEl === valueDue) {
+    ticketPrice = kilometresElem * priceKm - youngDiscount;
 
-    }else if (ageEl === 'Over-65') {
-    ticket_price = kilometresEl * price - senior_discount;
+    }else if (ageEl === valueTre) {
+    ticketPrice = kilometresElem * priceKm - seniorDiscount;
 
     }else {
-    ticket_price = kilometresEl * price;
+    ticketPrice = kilometresElem * priceKm;
     }
 
-    console.log(ticket_price.toFixed(2));
+    console.log(ticketPrice.toFixed(2));
 
-    return ticket_price;
+    return ticketPrice;
     
 
 })
 
-btn.addEventListener('submit', function(e){
+finalButton.addEventListener('submit', function(e){
     e.preventDefault()
     
     let datas = e.target.datas.value;
@@ -83,7 +90,7 @@ btn.addEventListener('submit', function(e){
 
     let eta = e.target.eta.value;
     
-
+    console.log(datas, km, eta);
 })
 
-console.log(datas, km, eta);
+
