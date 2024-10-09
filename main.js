@@ -1,3 +1,5 @@
+//MILESTONE 1
+
 const button = document.getElementById('button');
 let kilometres = document.getElementById('kilometres');
 
@@ -18,13 +20,13 @@ button.addEventListener('click', ()=>{
     let senior_discount = (price * kilometresEl *40) / 100;
     
     if (ageEl < 18) {
-    ticket_price = kilometres * price - young_discount;
+    ticket_price = kilometresEl * price - young_discount;
 
     }else if (ageEl > 65) {
-    ticket_price = kilometres * price - senior_discount;
+    ticket_price = kilometresEl * price - senior_discount;
 
     }else {
-    ticket_price = kilometres * price;
+    ticket_price = kilometresEl * price;
     }
 
     console.log(ticket_price.toFixed(2));
