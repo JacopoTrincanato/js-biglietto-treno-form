@@ -1,11 +1,12 @@
 //MILESTONE 1
 
+//dichiaro le variabili button, kilometres e age e assegno loro un valore
 const button = document.getElementById('button');
 let kilometres = document.getElementById('kilometres');
 
 let age = document.getElementById('age');
 
-
+//creo una funzione che permetta di calcolare il costo del biglietto del treno
 button.addEventListener('click', ()=>{
     let kilometresEl = kilometres.value;
 
@@ -46,9 +47,9 @@ let value1 = document.getElementById('Maggiorenne');
 let value2 = document.getElementById('Minorenne');
 let value3 = document.getElementById('Over65');
 
-
-finalButton.addEventListener('click', function(e){
-    e.preventDefault()
+//ripropongo la funzione che permetta di calcolare il costo del biglietto del treno nel form
+finalButton.addEventListener('click', ()=>{
+    
     let kilometresElem = kilometresTot.value;
 
     let ageEl = ageYears.value;
@@ -77,14 +78,23 @@ finalButton.addEventListener('click', function(e){
 
     console.log(ticketPrice.toFixed(2));
     
-
-    let datas = e.target.datas.value;
-
-    let km = e.target.km.value;
-
-    let eta = e.target.eta.value;
-    
-    console.log(datas, km, eta);
 })
 
 
+let ticketDatas = document.getElementById('ticketDatas');
+
+ticketDatas.addEventListener('submit', function(e){
+    let surname = e.target.datas.value;
+
+    let name = e.target.name.value;
+
+    let cost = e.target.cost.value;
+    
+    console.log(surname, name, cost);
+
+    let ticket = `
+    <h2>${surname}</h2>
+    <h2>${name}</h2>
+    <h2>${cost}</h2>
+    `
+})
