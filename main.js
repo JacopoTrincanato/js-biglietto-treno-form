@@ -83,6 +83,7 @@ finalButton.addEventListener('click', function(e){
         <h2>Prezzo finale: €${ticketPrice.toFixed(2)}</h2>
         <h2>Carrozza: ${wagon}</h2>
         <h2>Codice CP: ${cpCode}</h2>
+        
     `
 
     document.getElementById('result').innerHTML = ticket;
