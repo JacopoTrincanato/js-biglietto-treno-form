@@ -48,7 +48,7 @@ let value2 = document.getElementById('Minorenne');
 let value3 = document.getElementById('Over65');
 
 //ripropongo la funzione che permetta di calcolare il costo del biglietto del treno nel form
-finalButton.addEventListener('click', ()=>{
+finalButton.addEventListener('submit', function(e){
     
     let kilometresElem = kilometresTot.value;
 
@@ -77,11 +77,27 @@ finalButton.addEventListener('click', ()=>{
     }
 
     console.log(ticketPrice.toFixed(2));
+
+    e.preventDefault()
+
+    let surname = e.target.datas.value;
+
+    let name = e.target.name.value;
+
+    let cost = e.target.cost.value;
+    
+    console.log(surname, name, cost);
+
+    let ticket = `
+    <h2>${surname}</h2>
+    <h2>${name}</h2>
+    <h2>${cost}</h2>
+    `
     
 })
 
 
-let ticketDatas = document.getElementById('ticketDatas');
+/*let ticketDatas = document.getElementById('ticketDatas');
 
 ticketDatas.addEventListener('submit', function(e){
     let surname = e.target.datas.value;
@@ -97,4 +113,4 @@ ticketDatas.addEventListener('submit', function(e){
     <h2>${name}</h2>
     <h2>${cost}</h2>
     `
-})
+})*/
