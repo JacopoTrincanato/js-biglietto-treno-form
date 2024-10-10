@@ -43,12 +43,10 @@ const finalButton = document.getElementById('btn');
 let kilometresTot = document.getElementById('km');
 
 let ageYears = document.getElementById('eta');
-let value1 = document.getElementById('Maggiorenne');
-let value2 = document.getElementById('Minorenne');
-let value3 = document.getElementById('Over65');
 
 //ripropongo la funzione che permetta di calcolare il costo del biglietto del treno nel form
-finalButton.addEventListener('submit', function(e){
+finalButton.addEventListener('click', function(e){
+    e.preventDefault()
     
     let kilometresElem = kilometresTot.value;
 
@@ -58,18 +56,14 @@ finalButton.addEventListener('submit', function(e){
 
     let priceKm = 0.21;
 
-    let valueDue = value2.value;
-
-    let valueTre = value3.value;
-
     let youngDiscount = (priceKm * kilometresElem *20) / 100;
 
     let seniorDiscount = (priceKm * kilometresElem *40) / 100;
     
-    if (ageEl === valueDue) {
+    if (ageEl === 'Minorenne') {
     ticketPrice = kilometresElem * priceKm - youngDiscount;
 
-    }else if (ageEl === valueTre) {
+    }else if (ageEl === 'Over65') {
     ticketPrice = kilometresElem * priceKm - seniorDiscount;
 
     }else {
@@ -78,39 +72,13 @@ finalButton.addEventListener('submit', function(e){
 
     console.log(ticketPrice.toFixed(2));
 
-    e.preventDefault()
-
-    let surname = e.target.datas.value;
-
-    let name = e.target.name.value;
-
-    let cost = e.target.cost.value;
-    
-    console.log(surname, name, cost);
+    let name = document.getElementById('datas');
 
     let ticket = `
-    <h2>${surname}</h2>
-    <h2>${name}</h2>
-    <h2>${cost}</h2>
+        <h2>Nome: ${name.value}</h2>
+        <h2>Prezzo finale: €${ticketPrice.toFixed(2)}</h2>
     `
+
+    document.getElementById('result').innerHTML = ticket;
     
 })
-
-
-/*let ticketDatas = document.getElementById('ticketDatas');
-
-ticketDatas.addEventListener('submit', function(e){
-    let surname = e.target.datas.value;
-
-    let name = e.target.name.value;
-
-    let cost = e.target.cost.value;
-    
-    console.log(surname, name, cost);
-
-    let ticket = `
-    <h2>${surname}</h2>
-    <h2>${name}</h2>
-    <h2>${cost}</h2>
-    `
-})*/
