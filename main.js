@@ -74,9 +74,15 @@ finalButton.addEventListener('click', function(e){
 
     let name = document.getElementById('datas');
 
+    let wagon = Math.floor(Math.random() * 100) + 1;
+
+    let cpCode = Math.floor(Math.random() * 10000) + 1000;
+
     let ticket = `
         <h2>Nome: ${name.value}</h2>
         <h2>Prezzo finale: €${ticketPrice.toFixed(2)}</h2>
+        <h2>Carrozza: ${wagon}</h2>
+        <h2>Codice CP: ${cpCode}</h2>
     `
 
     document.getElementById('result').innerHTML = ticket;
