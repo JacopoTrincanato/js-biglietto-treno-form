@@ -79,10 +79,31 @@ finalButton.addEventListener('click', function(e){
     let cpCode = Math.floor(Math.random() * 10000) + 1000;
 
     let ticket = `
-        <h2>Nome: ${name.value}</h2>
-        <h2>Prezzo finale: €${ticketPrice.toFixed(2)}</h2>
-        <h2>Carrozza: ${wagon}</h2>
-        <h2>Codice CP: ${cpCode}</h2>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCACKfXvB4r4u8R0AAUPuCur75iGuMHwc0vw&s" alt="">
+        </div>
+        <div class="d-flex">
+            <div class="text-center">
+                <h2 class="mb-4">Nome:</h2>
+                <h2>${name.value}</h2>
+            </div>
+                
+            <div class="text-center">
+                <h2 class="mb-4">Prezzo finale:</h2>
+                <h2>€${ticketPrice.toFixed(2)}</h2>
+            </div>
+
+            <div class="text-center">
+                <h2 class="mb-4">Carrozza:</h2>
+                <h2>${wagon}</h2>
+            </div>
+
+            <div class="text-center">
+                <h2 class="mb-4">Codice CP:</h2>
+                <h2>${cpCode}</h2>
+            </div>
+        </div>
+        
         
     `
 
